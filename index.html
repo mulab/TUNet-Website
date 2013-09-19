@@ -38,12 +38,10 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">主页</a></li>
-            <li><a href="#about">立即下载</a></li>
-            <li><a href="#contact">用户反馈</a></li>
-
+            <!--<li class="active"><a href="#">主页</a></li>-->
+            <li><a href="#download">立即下载</a></li>
+            <li><a href="#introduction">功能介绍</a></li>
           </ul>
-
         </div><!--/.navbar-collapse -->
       </div>
     </div>
@@ -51,14 +49,16 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>TUNet客户端</h1>
+        <h1 id="download">TUNet</h1>
         <p>支持自动联网的智能校园网客户端。</p>
-        <p><a class="btn btn-primary btn-lg">立即下载 Android 版本 &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="download/TUNet-Android-v1.0-rc3.apk">
+          立即下载 Android 版本 &raquo;
+        </a></p>
           <!-- JiaThis Button BEGIN -->
           <div class="jiathis_style_32x32">
-              <a class="jiathis_button_qzone"></a>
+              <!--<a class="jiathis_button_qzone"></a>-->
               <a class="jiathis_button_tsina"></a>
-              <a class="jiathis_button_tqq"></a>
+              <!--<a class="jiathis_button_tqq"></a>-->
               <a class="jiathis_button_weixin"></a>
               <a class="jiathis_button_renren"></a>
               <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
@@ -67,22 +67,19 @@
           <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
           <!-- JiaThis Button END -->
         <div style="float:right"><img style="width:100%" src="img/TUNet_Phone.png"></div>
-
-
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="introduction">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-lg-4">
           <h2>自动服务模式</h2>
-          <div>Android TUNet 独有自动服务模式,打开此功能后, 程序将自动帮用户:
+          <div>Android TUNet 独有自动服务模式，打开此功能后，程序将自动帮用户：
               <ul>
                   <li>联网认证登录；</li>
                   <li>断开本机已过期的连接；</li>
-                  <li>在断网后过快重连的条 件下(ip_exist_error), 自动延时重试。</li>
-
+                  <li>在断网后过快重连的条件下(ip_exist_error)，自动延时重试。</li>
               </ul>
           </div>
           <!--p><a class="btn btn-default" href="#">View details &raquo;</a></p-->
@@ -92,18 +89,18 @@
           <div>Android TUNet 的连接管理界面比目前其他类似产品更为直观：
             <ul>
                 <li>用户可以为自己的电脑、手机、平板电脑和<span style="color:red">自主架设的带NAT的无线路由器</span>等设备进行命名；</li>
-                <li>只需进行一次命名,之 后就可以很直观地查看 连接情况；</li>
+                <li>只需进行一次命名，之后就可以很直观地查看连接情况；</li>
                 <li>菜鸟用户也可以轻松使用 ：）</li>
             </ul>
           </div>
           <!--p><a class="btn btn-default" href="#">View details &raquo;</a></p-->
-       </div>
+        </div>
         <div class="col-lg-4">
           <h2>其他特色功能</h2>
             <ul>
                 <li>
                     <p>实时信息显示</p>
-                    <p>Android TUNet 为用户显示更为精确的实时流量和账户余额信息,计入当前在线设备的实时消费,更为方便直观。</p>
+                    <p>Android TUNet 为用户显示更为精确的实时流量和账户余额信息，计入当前在线设备的实时消费，更为方便直观。</p>
                 </li>
                 <li>
                     <p>与Android系统充分集成</p>
@@ -112,30 +109,28 @@
                 <li>
                     <p>对同学自己购置的无线路由的支持</p>
                     <p>提示用户NAT共享流量的风险</p>
-
                 </li>
             </ul>
           <!--p><a class="btn btn-default" href="#">View details &raquo;</a></p-->
         </div>
       </div>
 
-      <hr>
+      <hr/>
 
       <footer>
-        <p>&copy; Labμ 2013</p>
+        <p>&copy; <a href="http://www.lab.mu">Lab μ</a> 2013</p>
       </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    </div> <!-- /container -->
 
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/main.js"></script>
-
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src='//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
     </body>
 </html>
