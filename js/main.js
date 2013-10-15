@@ -23,16 +23,19 @@ window.onresize = function() {
     imgTop = GetAbsoluteLocation(img).absoluteTop;
     widget = document.getElementById("mainWidget");
     widgetTop = GetAbsoluteLocation(widget).absoluteTop;
-    h = min($(window).height()-widgetTop, imgTop-widgetTop+$("#mainImg").height());
+    h = imgTop-widgetTop+$("#mainImg").height();
+    if ($(window).width() >= 768)
+        h = min($(window).height()-widgetTop, imgTop-widgetTop+$("#mainImg").height());
     $("#mainWidget").css("height", h+"px");
-
 }
 window.onload = function() {
     img = document.getElementById("mainImg");
     imgTop = GetAbsoluteLocation(img).absoluteTop;
     widget = document.getElementById("mainWidget");
     widgetTop = GetAbsoluteLocation(widget).absoluteTop;
-    h = min($(window).height()-widgetTop, imgTop-widgetTop+$("#mainImg").height());
+    h = imgTop-widgetTop+$("#mainImg").height();
+    if ($(window).width() >= 768)
+        h = min($(window).height()-widgetTop, imgTop-widgetTop+$("#mainImg").height());
     $("#mainWidget").css("height", h+"px");
 }
 
