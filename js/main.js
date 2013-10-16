@@ -30,12 +30,12 @@ function FixImage()
     $("#mainWidget").css("height", h+"px");
 
 	if ($(window).width() >= 768) {
-		$("#imgDiv").css("left", "40px");
-		$("#imgDiv").css("right", "auto");
+		$("#mainImg").css("left", "40px");
+		$("#mainImg").css("right", "auto");
 	}
 	else {
-		$("#imgDiv").css("left", ($(window).width()-$("#imgDiv"))/2+"px");
-		$("#imgDiv").css("right", "auto");
+		$("#mainImg").css("left", ($("#imgDiv").width()-$("#mainImg").width())/2+"px");
+		$("#mainImg").css("right", ($("#imgDiv").width()-$("#mainImg").width())/2+"px");
 	}
 }
 window.onresize = function() {
