@@ -18,8 +18,9 @@ function min(x, y)
     else
         return y;
 }
-window.onresize = function() {
-    img = document.getElementById("mainImg");
+function FixImage()
+{
+	img = document.getElementById("mainImg");
     imgTop = GetAbsoluteLocation(img).absoluteTop;
     widget = document.getElementById("mainWidget");
     widgetTop = GetAbsoluteLocation(widget).absoluteTop;
@@ -27,15 +28,20 @@ window.onresize = function() {
     if ($(window).width() >= 768)
         h = min($(window).height()-widgetTop, imgTop-widgetTop+$("#mainImg").height());
     $("#mainWidget").css("height", h+"px");
+
+	if ($(window).width() >= 768) {
+		$("#imgDiv").css("left", "40px");
+		$("#imgDiv").css("right", "auto");
+	}
+	else {
+		$("#imgDiv").css("left", ($(window).width()-$("#imgDiv"))/2+"px");
+		$("#imgDiv").css("right", "auto");
+	}
+}
+window.onresize = function() {
+    FixImage();
 }
 window.onload = function() {
-    img = document.getElementById("mainImg");
-    imgTop = GetAbsoluteLocation(img).absoluteTop;
-    widget = document.getElementById("mainWidget");
-    widgetTop = GetAbsoluteLocation(widget).absoluteTop;
-    h = imgTop-widgetTop+$("#mainImg").height();
-    if ($(window).width() >= 768)
-        h = min($(window).height()-widgetTop, imgTop-widgetTop+$("#mainImg").height());
-    $("#mainWidget").css("height", h+"px");
+	FixImage();
 }
 
