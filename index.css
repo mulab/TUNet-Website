@@ -1,12 +1,12 @@
 /* Large desktop */
-@media (min-width: 980px) { 
+@media (min-width: 990px) { 
  .qrcode {
     display: inline-block;
   }
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) { 
+@media (max-width: 990px) { 
  .qrcode {
     display: none;
   }
