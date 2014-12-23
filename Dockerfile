@@ -1,5 +1,5 @@
 FROM mulab/nginx
 MAINTAINER mulab.thu@gmail.com
 
-ADD .
+ADD . /data
 COPY default /etc/nginx/sites-enabled/default
