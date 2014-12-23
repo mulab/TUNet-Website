@@ -1,18 +1,18 @@
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server ipv6only=on;
-	location / {
-		root /data;
-		rewrite /rc /download/TUNet-Android-v1.3-rc2.apk redirect;
-		set $isWeixin 0;
-		if ($http_user_agent ~* "MicroMessenger") {
-			set $isWeixin 1;
+		listen 80 default_server;
+		listen [::]:80 default_server ipv6only=on;
+		location / {
+				root /data;
+				rewrite /rc /download/TUNet-Android-v2.0-rc1.apk redirect;
+				set $isWeixin 0;
+				if ($http_user_agent ~* "MicroMessenger") {
+						set $isWeixin 1;
+				}
+				if ($isWeixin = 0) {
+						rewrite /latest /download/TUNet-Android-v1.3.1.apk redirect;
+				}
+				if ($isWeixin = 1) {
+						rewrite /latest http://fusion.qq.com/cgi-bin/qzapps/unified_jump?appid=11095429 redirect;
+				}
 		}
-		if ($isWeixin = 0) {
-			rewrite /latest /download/TUNet-Android-v1.3.apk redirect;
-		}
-		if ($isWeixin = 1) {
-			rewrite /latest http://fusion.qq.com/cgi-bin/qzapps/unified_jump?appid=11095429 redirect;
-		}
-	}
 }
