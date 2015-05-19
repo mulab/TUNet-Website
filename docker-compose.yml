@@ -1,4 +1,4 @@
 web:
   build: .
   volumes:
-   - data:/www/data
+   - ./data:/www/data
