@@ -1,8 +1,7 @@
 FROM node:0.12
 
 WORKDIR /www
-COPY package.json /www/
-RUN npm install -g express-generator
+ADD . /www/
 RUN npm install
 
 EXPOSE 3000

@@ -27,7 +27,10 @@ app.post('/', function(req, res) {
     str += req.body[i] + ',';
   str = str.slice(0, str.length - 1) + '\n';
   console.log(str);
-  fs.appendFile(__dirname + '/out.csv', str, function() {
+  fs.appendFile(__dirname + '/data/out.csv', str, function(err) {
+    if(err) {
+      console.log(err);
+    }
     res.send('发送成功');
   });
   
