@@ -1,4 +1,5 @@
 web:
   build: .
+  command: node app.js
   volumes:
    - ./data:/www/data
