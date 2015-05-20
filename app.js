@@ -56,8 +56,8 @@ app.get('/form.css', function(req, res) {
 app.get('/form.js', function(req, res) {
   res.sendFile(__dirname + '/form.js');
 });
-app.get('/jQuery.min.js', function(req, res) {
-  res.sendFile(__dirname + '/jQuery.min.js');
+app.get('/jquery.min.js', function(req, res) {
+  res.sendFile(__dirname + '/jquery.min.js');
 });
 app.get('/uikit.min.css', function(req, res) {
   res.sendFile(__dirname + '/uikit.min.css');
