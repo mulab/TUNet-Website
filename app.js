@@ -17,6 +17,10 @@ function check(data) {
   var address = data["address"];
   var room = data["room"];
 
+  if (!name || !account || !school || !phone || !email || !address || !room) {
+  	return false;
+  }
+
   var invalid = false;
 
   if (name.length > 20 || name.length < 1) {
