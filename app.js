@@ -81,7 +81,8 @@ app.post('/', function(req, res) {
     var str = '';
     for (i in req.body)
       str += req.body[i] + ',';
-    str = str.slice(0, str.length - 1) + '\n';
+    str += (new Date());
+    str += '\n';
     fs.appendFile(__dirname + '/data/out.csv', str, function(err) {
       if(err) {
         console.log(err);
