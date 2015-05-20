@@ -64,7 +64,13 @@ app.get('/uikit.min.css', function(req, res) {
 });
 app.get('/count', function(req, res) {
   exec('wc -l data/out.csv', function (error, results) {
-    res.send(results);
+    if (error) {
+      console.log(error);
+      res.sendStatus(500);
+      res.send("error!");
+    } else {
+      res.send(results);
+    }
 })
 
 });
@@ -79,6 +85,8 @@ app.post('/', function(req, res) {
     fs.appendFile(__dirname + '/data/out.csv', str, function(err) {
       if(err) {
         console.log(err);
+        res.sendStatus(500);
+        res.send("服务器错误")
       } else {
       res.send('发送成功');
       }
