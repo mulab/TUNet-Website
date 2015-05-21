@@ -30,7 +30,7 @@ function check(data) {
   // account validation
   if (account.match(/\d*/g) === null || account.match(/\d*/g).length === 2) {
     invalid = true;
-  } else if (account.match(/([A-z]|\d)*/g) === null || account.match(/([A-z]|\d)*/g).length !== 2) {
+  } else if (account.match(/([A-z]|\d|-)*/g) === null || account.match(/([A-z]|\d|-)*/g).length !== 2) {
     invalid = true;
   }
 

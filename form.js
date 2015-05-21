@@ -15,7 +15,7 @@ $(document).ready(function() {
       $("#student-id").show();
       $("#account-invalid").hide();
       invalid = true;
-    } else if ($("#account").val().match(/([A-z]|\d)*/g) === null || $("#account").val().match(/([A-z]|\d)*/g).length !== 2) {
+    } else if ($("#account").val().match(/([A-z]|\d|-)*/g) === null || $("#account").val().match(/([A-z]|\d|-)*/g).length !== 2) {
       $("#account-invalid").show();
       $("#student-id").hide();
       invalid = true;
