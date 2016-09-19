@@ -1,5 +1,4 @@
-FROM mulab/nginx
+FROM nginx:1.9.11
 MAINTAINER mulab.thu@gmail.com
 
-ADD . /data
-COPY default /etc/nginx/sites-enabled/default
+ADD . /usr/share/nginx/html
