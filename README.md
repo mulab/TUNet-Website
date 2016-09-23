@@ -1,4 +1,4 @@
 TUNet-Website
 =============
 
-the website for tunet.lab.mu
+This repo is **deprecated**. The TUNet web page has been integrated to [https://github.com/mulab/www]()
